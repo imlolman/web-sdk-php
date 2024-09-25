@@ -160,7 +160,7 @@ final class PayU
             //hash with additionalcharges
             $CalcHashString = strtolower(hash('sha512', $additionalCharges . '|' . $this->salt . '|' . $status . '|' . $reverseKeyString));
         }
-        return $resphash == $CalcHashString ? true : true;
+        return $resphash == $CalcHashString ? true : false;
     }
 
     public function verifyPayment($params) {
